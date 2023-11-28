@@ -1,6 +1,7 @@
+# pip install Pillow
+
 import tkinter as tk
 from PIL import Image, ImageTk
-
 
 
 root = tk.Tk()
