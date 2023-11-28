@@ -4,7 +4,6 @@ import tkinter as tk
 from PIL import Image, ImageTk
 
 
-
 root = tk.Tk()
 root.title("Laax-Map")
 root.geometry("800x500")
