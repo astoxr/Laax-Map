@@ -9,7 +9,7 @@ root.title("Laax-Map")
 root.geometry("800x500")
 
 # Load the JPG image
-image_path = "Flims-Laax_pistemap.jpg"
+image_path = "Laax-ski-map.jpg"
 
 image = Image.open(image_path)
 photo = ImageTk.PhotoImage(image)
