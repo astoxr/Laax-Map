@@ -14,4 +14,5 @@ def Du_zu_JSON(du):
             ort_JSON = ort
             return(ort_JSON)
     print("Bitte schreibe den Namen richtig!")
-print(Du_zu_JSON("Nagens"))
+Wo_du_bist=input("Wo bist du?")
+print(Du_zu_JSON(Wo_du_bist))
