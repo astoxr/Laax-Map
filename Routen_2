@@ -1,6 +1,0 @@
-import json
-
-# öffnen der Datei
-with open('Daten_für_Karte.json', 'r') as routen:
-    
-    Daten = json.load(routen)
