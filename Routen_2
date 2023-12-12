@@ -1,9 +1,6 @@
 import json
 
-# Open the JSON file
-with open('Daten_für_Karte.json', 'r') as file:
-    # Load the JSON data
-    data = json.load(file)
-
-# Now 'data' contains the content of the JSON file
-print(data)
+# öffnen der Datei
+with open('Daten_für_Karte.json', 'r') as routen:
+    
+    Daten = json.load(routen)
