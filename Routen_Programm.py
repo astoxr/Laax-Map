@@ -1,5 +1,5 @@
 import json
-karte=[
+karte_json=[
     {
         "Name":"Talstation_Laax",
         "Position":1,
@@ -151,15 +151,8 @@ karte=[
         "Wohin":[29,7,5,11,10]
     }
 ]
-karte=json.loads(karte)
-# Beispiel: Zugriff auf den Namen des ersten Ortes
-erster_ort_name = karte[0]["Name"]
-print("Name des ersten Ortes:", erster_ort_name)
+# Lade die JSON-Daten
+karte = karte_json
 
-# Beispiel: Zugriff auf die Position des zweiten Ortes
-zweiter_ort_position = karte[1]["Position"]
-print("Position des zweiten Ortes:", zweiter_ort_position)
 
-# Beispiel: Zugriff auf die Verbindungen des dritten Ortes
-dritter_ort_verbindungen = karte[2]["Wohin"]
-print("Verbindungen des dritten Ortes:", dritter_ort_verbindungen)
+print(karte[0]["Name"])
