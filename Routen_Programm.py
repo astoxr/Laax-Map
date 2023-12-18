@@ -14,6 +14,7 @@ def Du_zu_JSON(ort_name):
         if ort["Name"]== ort_name:
             ort_JSON = ort
             return(ort_JSON)
+<<<<<<< Updated upstream
     print("Bitte schreibe den Namen richtig!")
     Du_zu_JSON(ort_name)
 
@@ -31,3 +32,6 @@ def wert_aus_wohin(position,welcher):
     x=position["Wohin"]
     return(x[welcher])
 print(wert_aus_wohin(Anfang,1))
+=======
+    print("Bitte schreibe den Namen richtig!")
+>>>>>>> Stashed changes
