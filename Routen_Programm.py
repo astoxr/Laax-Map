@@ -72,7 +72,21 @@ def Weg_finden():
                             alle_wege.append(weg)
                             break
                         else:
-                             break
+                             naechster_ort = Position_zu_JSON(k)
+                             for l in naechster_ort["Wohin"]:
+                                 weg.append(l)
+                                 if l == Ende["Position"]:
+                                     alle_wege.append(weg)
+                                     break
+                                 else:
+                                     naechster_ort = Position_zu_JSON(l)
+                                     for m in naechster_ort["Wohin"]:
+                                         weg.append(m)
+                                         if m == Ende["Position"]:
+                                             alle_wege.append(weg)
+                                             break
+                                         else:
+                                             break
 
 Weg_finden()
 print(alle_wege)
