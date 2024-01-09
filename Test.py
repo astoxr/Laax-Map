@@ -5,4 +5,4 @@ for i in range(100):
             break
         elif k == 7:
             print(7)
-    
+    print("blue")

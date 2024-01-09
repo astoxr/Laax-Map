@@ -55,39 +55,61 @@ def Weg_finden():
         weg = [Anfang["Position"]]
         weg.append(i)
         if i == Ende["Position"]:
-            alle_wege.append(weg)
+            alle_wege.extend(weg)
+            weg.pop(-1)
+            weg.pop(-1)
             break
         else:
             naechster_ort = Position_zu_JSON(i)
             for j in naechster_ort["Wohin"]:
                 weg.append(j)
                 if j == Ende["Position"]:
-                    alle_wege.append(weg)
+                    alle_wege.extend(weg)
+                    weg.pop(-1)
+                    weg.pop(-1)
                     break
                 else:
                     naechster_ort = Position_zu_JSON(j)
                     for k in naechster_ort["Wohin"]:
                         weg.append(k)
                         if k == Ende["Position"]:
-                            alle_wege.append(weg)
+                            alle_wege.extend(weg)
+                            weg.pop(-1)
+                            weg.pop(-1)
                             break
                         else:
                              naechster_ort = Position_zu_JSON(k)
                              for l in naechster_ort["Wohin"]:
                                  weg.append(l)
                                  if l == Ende["Position"]:
-                                     alle_wege.append(weg)
+                                     alle_wege.extend(weg)
+                                     weg.pop(-1)
+                                     weg.pop(-1)
                                      break
                                  else:
                                      naechster_ort = Position_zu_JSON(l)
                                      for m in naechster_ort["Wohin"]:
                                          weg.append(m)
                                          if m == Ende["Position"]:
-                                             alle_wege.append(weg)
+                                             alle_wege.extend(weg)
                                              break
                                          else:
-                                             break
+                                             weg.pop(-1)
+    x=[]
+    y=99
+    for i in alle_wege:
+        if i== Anfang["Position"]:
+            T=True
+        if T:
+            x.append(i)
+        if i == Ende["Position"]:
+            T=False
+            x.append(0)
+    x.split(0)
+    print(x)
 
-Weg_finden()
-print(alle_wege)
-            
+    print(alle_wege)
+
+
+
+Weg_finden()         
