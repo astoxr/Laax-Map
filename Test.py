@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 for i in range(100):
     for k in range(20):
         if k == 5:
@@ -6,3 +7,5 @@ for i in range(100):
         elif k == 7:
             print(7)
     print("blue")
+=======
+>>>>>>> Stashed changes
