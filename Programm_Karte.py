@@ -3,10 +3,7 @@ import json
 #Hier laden wir JSON Datei, so dass wir damit arbeiten können.
 with open('Daten_für_Karte.json', 'r') as routen:
     karte = json.load(routen)
-y=[]
-for i in karte:
-    y.append(i["Name"])
-print(y)
+
 
 #Modularer Entwurf um von der JSON Datei aus dem Namen die anderen Infos zu bekommen.
 def Du_zu_JSON(ort_name):
@@ -44,10 +41,8 @@ def Position_zu_JSON(position):
         if ort["Position"] == position:
             return ort
 
-def main():
+def main(anfangs_ort_name,ende_ort_name):
     kuerzester_weg_Namen=[]
-    anfangs_ort_name = input("Wo startest du?") 
-    ende_ort_name = input("Wo willst du hin?")
 
     anfangs_ort = Du_zu_JSON(anfangs_ort_name)
     ende_ort = Du_zu_JSON(ende_ort_name) #Hier wird mit den Modularen Befehlen von vorher der Input gesucht und dann gerade in JSON format umgewandelt.
@@ -66,4 +61,4 @@ def main():
         print(f"Es gibt keine Verbindung von {anfangs_ort_name} nach {ende_ort_name}.") #Hier wird noch überprüft, ob es eine Verbindung gibt.
     
 
-#main()
+main("Falera","Plaun")
