@@ -61,4 +61,4 @@ def main(anfangs_ort_name,ende_ort_name):
         print(f"Es gibt keine Verbindung von {anfangs_ort_name} nach {ende_ort_name}.") #Hier wird noch überprüft, ob es eine Verbindung gibt.
     
 
-main("Falera","Plaun")
+

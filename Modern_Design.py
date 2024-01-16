@@ -1,7 +1,7 @@
 import tkinter as tk #für das Fenster
 import customtkinter as ctk
 from PIL import Image
-import Programm_Karte
+from Programm_Karte import *
 
 def modern_design():
     ctk.set_appearance_mode("dark")
@@ -25,14 +25,31 @@ def modern_design():
 
     options = ['Talstation_Laax', 'Larnags', 'Curnius', 'Falera', 'Crap_Sogn_Gion', 'Proline_Sessellift', 'Alp_Dado', 'Crest_la_Siala', 'Plaun', 'Beginner_unten', 'Beginner_oben', 'Treis_Palas', 'Crap_Masegn', 'Lavadinas', 'Fuorcla', 'Fuorcla_da_Sagogn', 'Vorab', 'Vorab_Gletscher', 'Sogn_Martin', 'La_Siala', 'Mutta_Rodunda', 'Scansinas', 'Nagens', 'Grauberg', 'Stargels', 'Talstation_Flims', 'Foppa', 'Naraus', 'Ils_Plauns_unten', 'Ils_Plauns_oben']
 
-    start = ctk.CTkOptionMenu(root, values=options)
+
+    anfang = 0
+    schluss = 0
+
+    def anf_pos(choice):
+        anfang =  choice
+        
+        
+
+    start = ctk.CTkOptionMenu(root, values=options, command=anf_pos)
     start.pack(pady=10, padx=10)
 
 
-    ende = ctk.CTkOptionMenu(root, values=options)
+    def end_pos(choice):
+        schluss =  choice
+        
+
+    ende = ctk.CTkOptionMenu(root, values=options, command=end_pos)
     ende.pack(pady=20, padx=10)
 
-    main(start, ende)
+    
+    print(anfang, schluss)
+    #main(anfang, schluss)
+
+    main("Nagens", "Plaun")
 
 
 
