@@ -1,6 +1,7 @@
 import tkinter as tk #für das Fenster
 import customtkinter as ctk
 from PIL import Image
+import Programm_Karte
 
 def modern_design():
     ctk.set_appearance_mode("dark")
@@ -30,6 +31,8 @@ def modern_design():
 
     ende = ctk.CTkOptionMenu(root, values=options)
     ende.pack(pady=20, padx=10)
+
+    main(start, ende)
 
 
 
