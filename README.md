@@ -1,4 +1,3 @@
 # Laax-Map
 
-This Project is about a Smart-Laax-Map.
-The App Name will be Laax Smart-Map
+Um Das Programm zu starten, muss man auf die start.py Datei gehen und das Fenster öffnet sich.

@@ -22,7 +22,7 @@
     {
         "Name":"Crap_Sogn_Gion",
         "Position":5,
-        "Wohin":[1,3,6,7,9,10]
+        "Wohin":[1,3,6,7,9,10,13]
     },
     {
         "Name":"Proline_Sessellift",
@@ -62,7 +62,7 @@
     {
         "Name":"Crap_Masegn",
         "Position":13,
-        "Wohin":[12,9,14,15]
+        "Wohin":[12,9,14,15,5]
     },
     {
         "Name":"Lavadinas",
