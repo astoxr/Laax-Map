@@ -47,6 +47,7 @@ kuerzester_weg_Namen=[]
 
 def main(anfangs_ort_name,ende_ort_name):
     kuerzester_weg_Namen=[]
+    fehler = ["Oh! Da ist uns ein" , "Fehler unterloffen"]
     
 
     anfangs_ort = Du_zu_JSON(anfangs_ort_name)
@@ -60,9 +61,11 @@ def main(anfangs_ort_name,ende_ort_name):
             i= Position_zu_JSON(i)
             kuerzester_weg_Namen.append(i["Name"])
         print(kuerzester_weg_Namen) #Hier wird der Weg aus Zahlen zu den Namen umgeschrieben für einfacheres Verständnis.
-        return kuerzester_weg_Namen
+        return kuerzester_weg_Namen #Die Lieste wird zurück gesendet
+        
     else:
         print(f"Es gibt keine Verbindung von {anfangs_ort_name} nach {ende_ort_name}.") #Hier wird noch überprüft, ob es eine Verbindung gibt.
+        return fehler #falls ein Fehler entsteht, wird er hier als Fehlercode zurück gesendet
     
 
 

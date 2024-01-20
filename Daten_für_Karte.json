@@ -127,7 +127,7 @@
     {
         "Name":"Talstation_Flims",
         "Position":26,
-        "Wohin":[9]
+        "Wohin":[9,27]
     },
     {
         "Name":"Foppa",
