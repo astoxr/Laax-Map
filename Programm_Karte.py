@@ -59,17 +59,11 @@ def main(anfangs_ort_name,ende_ort_name):
         
         for i in kuerzester_weg:
             i= Position_zu_JSON(i)
-            kuerzester_weg_Namen.append(i["Name"])
-        print(kuerzester_weg_Namen) #Hier wird der Weg aus Zahlen zu den Namen umgeschrieben für einfacheres Verständnis.
+            kuerzester_weg_Namen.append(i["Name"])#Hier wird der Weg aus Zahlen zu den Namen umgeschrieben für einfacheres Verständnis.
+        
         return kuerzester_weg_Namen #Die Lieste wird zurück gesendet
         
     else:
         print(f"Es gibt keine Verbindung von {anfangs_ort_name} nach {ende_ort_name}.") #Hier wird noch überprüft, ob es eine Verbindung gibt.
         return fehler #falls ein Fehler entsteht, wird er hier als Fehlercode zurück gesendet
-    
-<<<<<<< HEAD
-main("Crap_Sogn_Gion","Vorab")
-=======
 
-
->>>>>>> 25e657ef005c2c46b2a91edc858ef4a3defd596e
