@@ -1,4 +1,6 @@
 import json
+from Modern_Design import *
+
 
 #Hier laden wir JSON Datei, so dass wir damit arbeiten können.
 with open('Daten_für_Karte.json', 'r') as routen:
@@ -41,8 +43,12 @@ def Position_zu_JSON(position):
         if ort["Position"] == position:
             return ort
 
+kuerzester_weg_Namen=[]
+
 def main(anfangs_ort_name,ende_ort_name):
     kuerzester_weg_Namen=[]
+    fehler = ["Oh! Da ist uns ein" , "Fehler unterloffen"]
+    
 
     anfangs_ort = Du_zu_JSON(anfangs_ort_name)
     ende_ort = Du_zu_JSON(ende_ort_name) #Hier wird mit den Modularen Befehlen von vorher der Input gesucht und dann gerade in JSON format umgewandelt.
@@ -50,14 +56,20 @@ def main(anfangs_ort_name,ende_ort_name):
     kuerzester_weg = Weg_finden(anfangs_ort["Position"], ende_ort["Position"]) #Mit dem Befehl "Weg_finden" wird der kürzeste Weg gesucht.
 
     if kuerzester_weg and kuerzester_weg[-1] == ende_ort["Position"]:
-        print(f"Kürzester Weg von {anfangs_ort_name} nach {ende_ort_name}: {kuerzester_weg}")
-        print(f"Anzahl der Stationen: {len(kuerzester_weg) - 1}")
-
+        
         for i in kuerzester_weg:
             i= Position_zu_JSON(i)
             kuerzester_weg_Namen.append(i["Name"])
         print(kuerzester_weg_Namen) #Hier wird der Weg aus Zahlen zu den Namen umgeschrieben für einfacheres Verständnis.
+        return kuerzester_weg_Namen #Die Lieste wird zurück gesendet
+        
     else:
         print(f"Es gibt keine Verbindung von {anfangs_ort_name} nach {ende_ort_name}.") #Hier wird noch überprüft, ob es eine Verbindung gibt.
+        return fehler #falls ein Fehler entsteht, wird er hier als Fehlercode zurück gesendet
     
+<<<<<<< HEAD
 main("Crap_Sogn_Gion","Vorab")
+=======
+
+
+>>>>>>> 25e657ef005c2c46b2a91edc858ef4a3defd596e
